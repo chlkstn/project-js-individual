@@ -1,0 +1,24 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.charMenu {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+
+  background-color: aqua;
+}
+
+#charInfo {
+  width: 200px;
+  position: relative;
+}
+
+#charList {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
