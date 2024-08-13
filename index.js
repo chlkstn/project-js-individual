@@ -22,16 +22,16 @@ async function fetchCharacters() {
 
       listItem.addEventListener("click", function () {
         const info = document.getElementById("charInfo");
-        const crewButton = document.createElement("button");
-        crewButton.textContent = "add to crew";
+        const addButton = document.createElement("button");
+        addButton.textContent = "add to crew";
 
         info.textContent =
           "name " + cList[i].name + " height " + cList[i].height;
 
-        document.getElementById("charInfo").appendChild(crewButton);
+        document.getElementById("charInfo").appendChild(addButton);
 
         // om karatären redan finns i listan kommer ett felmedelande
-        crewButton.addEventListener("click", function () {
+        addButton.addEventListener("click", function () {
           if (crewList.includes(cList[i].name)) {
             console.log("already in the crew");
           } else {
