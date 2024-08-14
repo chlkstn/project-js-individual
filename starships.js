@@ -1,10 +1,5 @@
 // array för din lista av karaktärer
 
-//TODO// Skriv om funktinerna så att programmet sparar selection direkt till Local Storage
-// Lägg till knapp som tar bort objektet i Local storage
-
-let starShips = [];
-
 //hämtar info från api och skapar knappar för varje karaktär
 
 // Array for the list of selected ships
@@ -46,6 +41,11 @@ function displayShipInfo(ship) {
   info.appendChild(addButton);
 
   addButton.addEventListener("click", () => addToCrew(ship.name));
+  const remButton = document.createElement("button");
+  remButton.textContent = "Remove";
+  info.appendChild(remButton);
+
+  remButton.addEventListener("click", () => removeCrew(ship.name));
 }
 
 // Adds the ship to the crew if it's not already there, and renders the selection
@@ -56,14 +56,28 @@ function addToCrew(shipName) {
     console.log("Already in the garage");
   } else {
     shipList.push(shipName);
+    const storageShip = JSON.stringify(shipList);
+    localStorage.setItem("ship", storageShip);
+
     renderSelection();
     console.log(shipList);
   }
 }
 
+function removeCrew(shipName) {
+  // Remove the ship from the array
+  shipList = shipList.filter((ship) => ship !== shipName);
+
+  // Update local storage
+  localStorage.setItem("ship", JSON.stringify(shipList));
+
+  // Re-render the selection menu
+  renderSelection();
+}
+
 // Renders the selected ships in the selection menu
 function renderSelection() {
-  const retrievedArrayString = localStorage.getItem("ships");
+  const retrievedArrayString = localStorage.getItem("ship");
   const retrievedArray = JSON.parse(retrievedArrayString);
 
   const select = document.getElementById("selectionMenu");
@@ -84,9 +98,9 @@ function setupEventListeners() {
 }
 
 // Initialize the application
-function init() {
+function startPage() {
   fetchCharacters();
   setupEventListeners();
 }
 
-init();
+startPage();

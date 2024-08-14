@@ -7,33 +7,41 @@
     <title>Document</title>
   </head>
   <body>
-    <section class="content">
-      <aside class="charMenu" id="charSelect">
-        Characters
-        <ul id="charList"></ul>
-      </aside>
+    <main>
+      <section class="container">
+        <header>
+          <h1>
+            StarWars<br />
+            Journey maker
+          </h1>
+          <section id ="navbar">
+            <button>Select your Crew</button>
+            <button>Select StarShip</button>
+            <button>Choose Destination</button>
+            <button>EMBARK</button>
+          </section>
 
-      <aside class="charMenu" id="charInfo">
-        <article id="charInfo"></article>
-      </aside>
-    </section>
-    <section class="selection">
-      <h1>My selection</h1>
-      <article id="selectionMenu"></article>
-      <button id="saveCrew">Save Crew</button>
-    </section>
+          <p>Select your crew of brave heroes</p>
+        </header>
 
-    <!-- <button id="lukeBTN">Add Luke</button>
-    <button id="leiaBTN">Add Leia</button>
-    <button id="jabbaBTN">Add jabba</button>
-    <br />
-    <button id="saveBTN">Save</button>
-    <button id="deleteBTN">Delete</button>
-    <br />
-    <p id="print">Saved</p>
-    <button id="loadBTN">load heroes</button>
+        <aside id="charSelect">
+          <h2>Characters</h2>
+          <ul id="charList"></ul>
+        </aside>
 
-    <p id="heroList">My heroes</p> -->
+        <aside id="charInfo">
+          <h2>Info</h2>
+          <article id="renderInfo"></article>
+        </aside>
+
+        <section class="selection">
+          <h2>My Crew</h2>
+          <article id="mySelection"></article>
+        </section>
+      </section>
+    </main>
+
+    <script src="functions.js"></script>
 
     <script src="index.js"></script>
   </body>
