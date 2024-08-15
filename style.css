@@ -17,6 +17,11 @@ body {
   margin: 0;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+}
+
 p {
   color: var(--white);
 }
@@ -39,8 +44,12 @@ h2 {
   border-radius: 20px;
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+  min-width: 700px;
   max-width: 900px;
+}
+
+#embarkBtn {
+  color: red;
 }
 
 button {

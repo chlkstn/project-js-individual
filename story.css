@@ -1,0 +1,45 @@
+body {
+  background-color: black;
+  color: yellow;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  transform: perspective(400px) rotateX(45deg) translateY(400px);
+  position: fixed;
+  width: 400px;
+  /* left: 600px; */
+
+  color: yellow;
+  font-family: Arial, Helvetica, sans-serif;
+
+  animation-name: pscroll;
+  animation-duration: 90s;
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+.highlight {
+  color: rgb(111, 250, 255);
+}
+
+@keyframes pscroll {
+  0% {
+    transform: perspective(400px) rotateX(45deg) translateY(400px);
+  }
+  100% {
+    transform: perspective(400px) rotateX(45deg) translateY(-2000px);
+  }
+}

@@ -4,24 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>starships</title>
   </head>
   <body>
-    <section class="content">
-      <aside class="charMenu" id="charSelect">
-        Characters
-        <ul id="charList"></ul>
-      </aside>
+    <main>
+      <section class="container">
+        <header>
+          <h1>
+            StarWars<br />
+            Journey maker
+          </h1>
+          <section id="navbar">
+            <button id="crewBtn">Select your Crew</button>
+            <button id="shipBtn">Select StarShip</button>
+            <button id="planetBtn">Choose Planet Destination</button>
+            <button id="embarkBtn">EMBARK</button>
+          </section>
 
-      <aside class="charMenu" id="charInfo">
-        <article id="charInfo"></article>
-      </aside>
-    </section>
-    <section class="selection">
-      <h1>My selection</h1>
-      <article id="selectionMenu"></article>
-      <button id="saveCrew">Save Crew</button>
-    </section>
+          <p id=" instruction">Select your Starship</p>
+        </header>
+
+        <aside id="charSelect">
+          <h2>Starships</h2>
+          <ul id="charList"></ul>
+        </aside>
+
+        <aside id="charInfo">
+          <h2>Info</h2>
+          <article id="renderInfo"></article>
+        </aside>
+
+        <section class="selection">
+          <h2>My ship</h2>
+          <ul id="mySelection"></ul>
+        </section>
+      </section>
+    </main>
+
+    <script src="navbar.js"></script>
 
     <script src="starships.js"></script>
   </body>
