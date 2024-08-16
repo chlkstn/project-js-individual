@@ -1,5 +1,6 @@
 // hämtar alla sparade uppgifter från Local storage och lägger in dem i texten
 
+// beroende på antalet crewmembers skrivs storyn ihop på olika sätt med hjälp av if satsen
 function writeNames() {
   const retrievedCrewString = localStorage.getItem("crew");
   const retrievedCrew = JSON.parse(retrievedCrewString);
@@ -44,15 +45,6 @@ function writeNames() {
     output4.textContent =
       " the corrupted " + retrievedCrew[3] + " who had joined the dark side..";
   }
-
-  /* const output1 = document.getElementById("name1");
-  output1.textContent = retrievedCrew[0];
-  const output2 = document.getElementById("name2");
-  output2.textContent = "together with the brave" + retrievedCrew[1];
-  const output3 = document.getElementById("name3");
-  output3.textContent = "and the fearless spacepilot" + retrievedCrew[2];
-  const output4 = document.getElementById("name4");
-  output4.textContent = "and their follower" + retrievedCrew[3]; */
 }
 
 function writeShip() {
