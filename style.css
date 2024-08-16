@@ -1,7 +1,7 @@
 @font-face {
   font-family: "sf_distant_galaxyregular";
-  src: url("sfdistantgalaxy-webfont.woff2") format("woff2"),
-    url("sfdistantgalaxy-webfont.woff") format("woff");
+  src: url("fonts/sfdistantgalaxy-webfont.woff2") format("woff2"),
+    url("fonts/sfdistantgalaxy-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -49,7 +49,7 @@ h2 {
 }
 
 #embarkBtn {
-  color: red;
+  color: rgb(255, 115, 0);
 }
 
 button {
@@ -154,4 +154,11 @@ header {
 
 #mySelection {
   justify-self: center;
+}
+
+#instruction {
+  font-size: 1.5rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: 900;
 }

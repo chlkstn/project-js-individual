@@ -1,6 +1,8 @@
 // En tom array för att lista valet av karaktärer
 let charList = [];
 
+// funktion för att starta sidan med fetch av valfritt API
+
 function startIndex() {
   fetchData("https://swapi.dev/api/people");
 }

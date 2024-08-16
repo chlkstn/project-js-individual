@@ -1,6 +1,12 @@
+:root {
+  --blue: #6ef5ff;
+  --yellow: #ffe81f;
+  --white: #f5f1f1;
+}
+
 body {
   background-color: black;
-  color: yellow;
+  color: var(--yellow);
 }
 
 main {
@@ -12,13 +18,11 @@ section {
   transform: perspective(400px) rotateX(45deg) translateY(400px);
   position: fixed;
   width: 400px;
-  /* left: 600px; */
 
-  color: yellow;
   font-family: Arial, Helvetica, sans-serif;
 
   animation-name: pscroll;
-  animation-duration: 90s;
+  animation-duration: 120s;
 
   h1 {
     font-size: 2rem;
@@ -31,8 +35,24 @@ section {
   }
 }
 
-.highlight {
-  color: rgb(111, 250, 255);
+button {
+  margin-top: 4rem;
+  margin-left: 8rem;
+  background-color: black;
+  color: rgb(99, 227, 250);
+  border: solid white 1px;
+  border-radius: 4px;
+  padding: 0.3rem;
+}
+
+button:hover {
+  background-color: var(--white);
+  color: rgb(0, 0, 0);
+}
+
+button:active {
+  background-color: var(--blue);
+  transform: translateY(2px);
 }
 
 @keyframes pscroll {
@@ -41,5 +61,22 @@ section {
   }
   100% {
     transform: perspective(400px) rotateX(45deg) translateY(-2000px);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .story {
+    font-size: 0.7rem;
+  }
+
+  section {
+    transform: perspective(400px) rotateX(45deg) translateY(400px);
+    position: fixed;
+    width: 200px;
   }
 }
